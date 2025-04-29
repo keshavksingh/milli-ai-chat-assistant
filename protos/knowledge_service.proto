@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package knowledge;
+
+service KnowledgeService {
+  rpc RetrieveRelevantDocs (KnowledgeRequest) returns (KnowledgeResponse);
+}
+
+message KnowledgeRequest {
+  string query = 1;
+}
+
+message KnowledgeResponse {
+  repeated string documents = 1;
+}

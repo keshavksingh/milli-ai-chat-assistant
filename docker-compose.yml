@@ -1,0 +1,49 @@
+services:
+  knowledge_service:
+    build:
+      context: .
+      dockerfile: knowledge_service/Dockerfile
+    ports:
+      - "50052:50052"
+    networks:
+      - mynetwork
+    restart: unless-stopped
+
+  llm_service:
+    build:
+      context: .
+      dockerfile: llm_service/Dockerfile
+    ports:
+      - "50053:50053"
+    networks:
+      - mynetwork
+    restart: unless-stopped
+
+  support_service:
+    build:
+      context: .
+      dockerfile: support_service/Dockerfile
+    ports:
+      - "50051:50051"
+    depends_on:
+      - knowledge_service
+      - llm_service
+    networks:
+      - mynetwork
+    restart: unless-stopped
+
+  gateway_server:
+    build:
+      context: .
+      dockerfile: gateway_server/Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - support_service
+    networks:
+      - mynetwork
+    restart: unless-stopped
+
+networks:
+  mynetwork:
+    driver: bridge

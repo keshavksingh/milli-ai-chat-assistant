@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package llm;
+
+service LLMService {
+  rpc GenerateAnswer (LLMRequest) returns (LLMResponse);
+}
+
+message LLMRequest {
+  string prompt = 1;
+  repeated string memory = 2; // Past conversation (alternate user/assistant)
+}
+
+message LLMResponse {
+  string completion = 1;
+}

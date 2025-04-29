@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package support;
+
+service SupportService {
+  rpc AnswerCustomerQuery (CustomerQueryRequest) returns (stream CustomerQueryStreamResponse);
+}
+
+message CustomerQueryRequest {
+  string customer_id = 1;
+  string query = 2;
+}
+
+message CustomerQueryStreamResponse {
+  string token = 1;
+  bool is_final = 2;
+}
