@@ -1,6 +1,6 @@
 # milli-ai-chat-assistant
 
-![image](https://github.com/user-attachments/assets/f71868d1-c3c9-4086-88b4-d4ff4cc48e2e)
+![image](https://github.com/user-attachments/assets/9c820b47-2904-4a40-bcfa-401d24ccf78b)
 
 
 
