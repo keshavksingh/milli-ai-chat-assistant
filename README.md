@@ -1,5 +1,10 @@
 # milli-ai-chat-assistant
- Milli-AI-Chat-Assistant
+
+ [Browser Client] --(WebSocket)--> [FastAPI WebSocket Server (gateway_server)] --(gRPC)--> [SupportService Controller] (gRPC)
+                                                                                           |
+                                                                                           |---> [KnowledgeService] (gRPC)
+                                                                                           |---> [LLMService] (gRPC)
+
 
 ![image](https://github.com/user-attachments/assets/a71fa951-83bc-412e-938b-04c9e1538b83)
 
