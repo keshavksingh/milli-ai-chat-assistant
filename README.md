@@ -9,3 +9,4 @@
 ![image](https://github.com/user-attachments/assets/23ccdd78-fa2b-489b-b768-ebed77dd40f9)
 
 Demo Video - https://youtu.be/jgshrRR68QQ
+Detailed Article - https://medium.com/@masterkeshav/ai-engineering-grpc-powered-ai-assistant-open-ai-vector-db-faiss-websocket-3898949185f0
